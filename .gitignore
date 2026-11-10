@@ -1,0 +1,5 @@
+../.idea/
+venv/
+.venv/cd poo-grupoX-escola-de-cursos
+git status
+__pycache__/
