@@ -19,15 +19,20 @@ class Escola:
         """Mostra todas as pessoas cadastradas."""
         if not self.__pessoas:
             print("Nenhuma pessoa cadastrada.")
+            return
+
         for pessoa in self.__pessoas:
             print(pessoa)
 
     def buscar_por_nome(self, nome):
         """Retorna as pessoas cujo nome contém o texto buscado."""
-        return [p for p in self.__pessoas if nome.lower() in p.nome.lower()]
+        return [
+            p for p in self.__pessoas
+            if nome.lower() in p.nome.lower()
+        ]
 
     def executar_acao_polimorfica(self):
-        """Chama o mesmo método em todos os objetos (polimorfismo)."""
+        """Chama o mesmo método em todos os objetos."""
         for pessoa in self.__pessoas:
             valor = pessoa.calcular_valor_mensal()
             print(f"{pessoa.nome}: R$ {valor:.2f}")
