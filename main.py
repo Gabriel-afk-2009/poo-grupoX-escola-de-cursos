@@ -1,31 +1,24 @@
-"""Programa principal do Sistema de Escola de Cursos."""
 
 from aluno import Aluno
 from professor import Professor
 from coordenador import Coordenador
 from escola import Escola
 
-
 def ler_inteiro(mensagem):
-    """Lê um número inteiro e repete até receber um valor válido."""
     while True:
         try:
             return int(input(mensagem))
         except ValueError:
             print("Digite um número inteiro válido.")
 
-
 def ler_decimal(mensagem):
-    """Lê um número decimal, aceitando vírgula ou ponto."""
     while True:
         try:
             return float(input(mensagem).replace(",", "."))
         except ValueError:
             print("Digite um valor numérico válido.")
 
-
 def cadastrar_pessoa(escola):
-    """Solicita os dados e cadastra aluno, professor ou coordenador."""
     print("\nTipo de cadastro:")
     print("1 - Aluno")
     print("2 - Professor")
@@ -60,15 +53,12 @@ def cadastrar_pessoa(escola):
     except ValueError as erro:
         print(f"Não foi possível cadastrar: {erro}")
 
-
 def listar_pessoas(escola):
-    """Lista todas as pessoas cadastradas."""
     print("\n--- Pessoas cadastradas ---")
     escola.listar()
 
 
 def buscar_pessoa(escola):
-    """Busca pessoas pelo nome ou parte dele."""
     termo = input("Digite o nome que deseja buscar: ").strip()
     resultados = escola.buscar_por_nome(termo)
 
@@ -79,15 +69,11 @@ def buscar_pessoa(escola):
     else:
         print("Nenhuma pessoa encontrada.")
 
-
 def executar_acao(escola):
-    """Executa o método polimórfico para todos os objetos cadastrados."""
     print("\n--- Valores mensais (ação polimórfica) ---")
     escola.executar_acao_polimorfica()
 
-
 def exibir_menu():
-    """Exibe as opções disponíveis no sistema."""
     print("\n========== ESCOLA DE CURSOS ==========")
     print("1 - Cadastrar pessoa")
     print("2 - Listar pessoas")
@@ -96,9 +82,7 @@ def exibir_menu():
     print("5 - Sair")
     print("======================================")
 
-
 def main():
-    """Executa o menu principal até o usuário escolher sair."""
     escola = Escola("Escola de Cursos")
 
     while True:
