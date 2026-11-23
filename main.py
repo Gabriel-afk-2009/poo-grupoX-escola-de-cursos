@@ -73,13 +73,13 @@ def executar_acao(escola):
     escola.executar_acao_polimorfica()
 
 def exibir_menu():
-    print("\n========== ESCOLA DE CURSOS ==========")
+    print("\nESCOLA DE CURSOS")
     print("1 - Cadastrar pessoa")
     print("2 - Listar pessoas")
     print("3 - Buscar pessoa")
     print("4 - Executar ação polimórfica")
     print("5 - Sair")
-    print("======================================")
+    print("*************************************")
 
 def main():
     escola = Escola("Escola de Cursos")
