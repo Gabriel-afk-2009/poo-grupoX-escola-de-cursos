@@ -1,7 +1,7 @@
 class Pessoa:
 
     def __init__(self, nome, idade):
-        self.nome = nome    # usa o setter, então já valida
+        self.nome = nome
         self.idade = idade
 
     @property
