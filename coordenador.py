@@ -1,6 +1,5 @@
 from pessoa import Pessoa
 
-
 class Coordenador(Pessoa):
 
     def __init__(self, nome, idade, area, salario_base, bonus):

@@ -1,8 +1,6 @@
 from pessoa import Pessoa
 
-
 class Aluno(Pessoa):
-
 
     def __init__(self, nome, idade, curso, mensalidade):
 
@@ -33,5 +31,4 @@ class Aluno(Pessoa):
         return self.__mensalidade
 
     def __str__(self):
-        """Retorna os dados do aluno."""
         return f"[Aluno] {super().__str__()} | Curso: {self.__curso}"
